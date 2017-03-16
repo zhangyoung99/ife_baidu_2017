@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>右击菜单</title>
+	<style>
+		.click-ct {
+			width: 500px;
+			height: 100px;
+			line-height: 100px;
+			background: #e5e5e5;
+		}
+		.menu {
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 200px;
+			width: 300px;
+			border: 1px solid #e5e5e5;
+			background: #f8f8f8;
+			z-index: 9;
+		}
+	</style>
+</head>
+<body>
+	<div class="click-ct">
+		right click to see the menu
+	</div>
+	<div class="menu">
+		<p>menu item1</p>
+		<p>menu item2</p>
+	</div>
+	<script type="text/javascript">
+		var click = document.querySelector(".click-ct"),
+		    menu = document.querySelector(".menu");
+		click.addEventListener("contextmenu",function(){
+			menu.style.display = "block";
+		},false);
+	</script>
+</body>
+</html>
