@@ -44,66 +44,31 @@
 </head>
 <body>
 	<form id="myForm">
-			<div class="form-item">
-				<lable for="ipt">名称</lable>
-				<input type="text" name="name" id="ipt">
-				<a href="javascript:;" id="check">验证</a>
-			</div>
-			<span id="tipText">必填，长度为4-16个字符</span>
+		<div class="form-item">
+			<lable for="ipt">名称</lable>
+			<input type="text" name="name" id="ipt">
+			<a href="javascript:;" id="check">验证</a>
+		</div>
+		<span id="tipText">必填，长度为4-16个字符</span>
 	</form>
-	<!-- <script src="js/jquery-1.9.1.min.js"></script> -->
-<script type="text/javascript">
-	var form = document.getElementById("myForm"),
-			ipt = document.getElementById("ipt"),
-			check = document.getElementById("check"),
-			tipText = document.getElementById("tipText");
+	<script type="text/javascript">
+		var form = document.getElementById("myForm"),
+				ipt = document.getElementById("ipt"),
+				check = document.getElementById("check"),
+				tipText = document.getElementById("tipText");
 
-	// ipt.addEventListener("blur",function(event){
-	// 	var el = event.target;
-	// 			if(/[^\d]/.test(el.value)){
-	// 				el.style.backgroundColor = "red";
-	// 			}else {
-	// 				el.style.backgroundColor = "";
-	// 			}
-	// },false);
-	check.addEventListener("click",function(event){
-		if(/^\w{4,16}$/.test(ipt.value)){
-			tipText.innerHTML = "格式正确";
-			tipText.style.color = "#93cf87";
-			ipt.style.borderColor = "#93cf87";
-		}else {
-			tipText.innerHTML = "至少输入4个字符";
-			tipText.style.color = "#F1604F";
-			ipt.style.borderColor = "#F1604F";
-		}
-		// switch(ipt.value){
-		// 	case "null":
-		// 		tipText.innerHTML = "名称不能为空";
-		// 		tipText.style.color = "#F1604F";
-		// 		break;
-		// 	case "valid":
-		// 	  if(/\w{4,16}/.test(ipt.value)){
-		// 			tipText.innerHTML = "格式正确";
-		// 			tipText.style.color = "#93cf87";			
-		//     }
-		// 		break;
-		// 	case "invalid":
-		// 	  if(/\w{,16}/.test(ipt.value)){
-		// 			tipText.innerHTML = "超出输入范围";
-		// 			tipText.style.color = "#F1604F";
-		// 	  }	
-		// 		break;
-		// 	case "invalid":
-		// 	  if(/\W/.test(ipt.value)){
-		// 			tipText.innerHTML = "格式不正确";
-		// 			tipText.style.color = "#F1604F";
-		// 	  }	
-		// 		break;
-		// }			
-	},false)
-	// .ipt.addEventListener("change",function(){
-	// 	ipt.style.borderColor =  #
-	// },false);
-</script>
+		check.addEventListener("click",function(event){
+			if(/^\w{4,16}$/.test(ipt.value)){
+				tipText.innerHTML = "格式正确";
+				tipText.style.color = "#93cf87";
+				ipt.style.borderColor = "#93cf87";
+			}else {
+				tipText.innerHTML = "至少输入4个字符";
+				tipText.style.color = "#F1604F";
+				ipt.style.borderColor = "#F1604F";
+			}
+
+		},false)
+	</script>
 </body>
 </html>
